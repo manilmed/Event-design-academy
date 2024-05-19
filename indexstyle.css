@@ -101,6 +101,22 @@
     color: #6e6b68;
     line-height: 140%;
   }
+ @media (max-width: 768px) {
+    .content-wrapper {
+      flex-direction: column;
+      text-align: center;
+    }
+    .image-container {
+      width: 100%;
+      padding: 0 10px;
+      
+    }
+    .text-content{
+      width: 100%;
+      padding: 0 10px;
+    }
+  }
+  
   
   
   
