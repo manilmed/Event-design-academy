@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  background-image: url("backgroundpic.jpg");
+  position: relative;
+  z-index: 1;
+  
+}
+
+
+
+.container {
+  background-color: #c48a49d3;
+  transform-origin: top left;
+  transition: transform 0.5s linear;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 50px;
+  
+}
+
+.container.show-nav {
+  transform: rotate(-20deg);
+  
+}
+
+.circle-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+  z-index:1;
+
+}
+
+.circle {
+  background-color: #fdb64b;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: relative;
+  transition: transform 0.5s linear;
+}
+
+.container.show-nav .circle {
+  transform: rotate(-70deg);
+}
+
+.circle button {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  background: transparent;
+  border: 0;
+  font-size: 26px;
+  color: #ffffff;
+}
+
+.circle button:focus {
+  outline: none;
+}
+
+.circle button#open {
+  left: 60%;
+}
+
+.circle button#close {
+  top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+
+.container.show-nav + nav li {
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
+
+nav {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  
+}
+
+nav ul {
+  list-style-type: none;
+  padding-left: 30px;
+}
+
+nav ul li {
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 40px 0;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-in;
+}
+
+nav ul li i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+nav ul li + li {
+  margin-left: 15px;
+  transform: translateX(-150%);
+}
+
+nav ul li + li + li {
+  margin-left: 30px;
+  transform: translateX(-200%);
+}
+
+nav a{
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+nav a:hover {
+  color: #f1730b;
+  font-weight: bold;
+}
+
+.content img {
+  max-width: 100%;
+  z-index: 1;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 50px auto;
+  
+  margin-top: 10%;
+  
+}
+
+.content h1 {
+  margin: 0;
+}
+
+.content small {
+  color: #555;
+  font-style: italic;
+}
+
+.content p {
+  color: #333;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+.container {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px 40px;
+  border-radius: 5px;
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.container a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+
+.circle1 {
+  position: absolute;
+  background-color: #ffffff;
+  width:1em;
+  height:1em;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: scale 0.5s ease-out;
+}
+.ripple {
+  position: relative;
+  
+}
+@keyframes scale {
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 0;
+  position: relative;
+  
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.footer-nav h3, .footer-social h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-nav ul, .footer-social ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-nav li, .footer-social li {
+  margin-bottom: 5px;
+}
+
+.footer-nav a, .footer-social a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-social a i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.footer-social ul {
+  display: flex;
+}
+
+.footer-nav ul, .footer-social ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-nav ul li, .footer-social ul li {
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-nav ul li a:hover, .footer-social ul li a:hover {
+  color: #fdb64b;
+}
+
+
+
+.footer-container {
+  position: relative;
+  z-index: 0;
+}
+
+.footer-nav a, .footer-social a {
+  position: relative;
+  z-index:0;
+}
+.box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+  margin-top: 100px;
+  
+  transform: translateX(400%);
+  transition: transform 0.4s ease;
+  
+}
+.box:nth-of-type(even) {
+  transform: translateX(-400%);
+}
+
+.box.show {
+  transform: translateX(0%);
+}
